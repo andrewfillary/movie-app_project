@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+            {% for magazine in magazines %}
+            <div class="magazines">
+                <img width="100%" src="/media/{{magazine.image}}">
+                    <div class="magazine_text">
+                    <p>{{magazine.month}}&nbsp;{{magazine.year}}</p>
+                    <form class="btn btn-primary">Download</form>
+                    </div>
+            </div>
+            {% endfor %}
+{% endblock %}
+
+<!--https://s-media-cache-ak0.pinimg.com/736x/45/f3/db/45f3db946635dbca7f849778767c0dee.jpg-->

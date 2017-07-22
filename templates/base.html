@@ -1,0 +1,47 @@
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Movie Reviews</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block head_js %}{% endblock %}
+</head>
+<body>
+<div class="container">
+   <div class="masthead">
+       <ul class="nav nav-pills pull-right">
+           <li><a href="/">Home</a></li>
+           <li><a href="/magazines">Magazines</a></li>
+           <li><a href="/reviews">Hit Reviews</a></li>
+           <!--<li><a href="/forum/">Forum</a></li>-->
+           <li><a href="#">Movie Stats</a></li>
+           {% if user.is_authenticated %}
+                <li><a href="#">{{ user.email }}</a></li>
+                <li><a href="{% url 'logout' %}">Log Out</a></li>
+           {% else %}
+                <li><a href="{% url 'register' %}">Subscribe</a></li>
+                <li><a href="{% url 'login' %}">Log In</a></li>
+           {% endif %}
+       </ul>
+       <h1><span class="fui-settings-16 muted">Movie Reviews</span></h1>
+   </div>
+
+   <hr>
+
+   <div class="container">
+       {% block content %}
+       {% endblock %}
+   </div>
+
+   <hr>
+
+   <div class="footer">
+       <p>A site by Andrew Fillary</p>
+   </div>
+</div>
+</body>
+</html>

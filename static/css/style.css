@@ -1,0 +1,57 @@
+*, a {
+    color: white;
+}
+
+span {
+    text-align: left;
+}
+
+body {
+    background-color: #1b1b1b;
+}
+
+tr.magazines {
+    width: 20%;
+    display: block;
+    margin-right: 5%;
+}
+
+table.magazines {
+    display: inline-block;
+}
+td.mag_col {
+    text-align: center;
+    border: 1px solid black;
+    background: #1b1b1b;
+}
+
+div.magazines {
+    display: block;
+    text-align: center;
+}
+
+div.magazine_text {
+    display: grid;
+    width: 100%;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 15%;
+}
+
+.review_img {
+    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+
+@media screen and (min-width: 480px) {
+
+    div.magazines {
+        display: inline-block;
+        width:20%;
+    }
+
+    div.magazine_text {
+        display: inline;
+        width:20%;
+    }
+
+}
