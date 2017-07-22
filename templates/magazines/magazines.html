@@ -6,7 +6,14 @@
                 <img width="100%" src="/media/{{magazine.image}}">
                     <div class="magazine_text">
                     <p>{{magazine.month}}&nbsp;{{magazine.year}}</p>
-                    <form class="btn btn-primary">Download</form>
+
+            {% if user.is_authenticated %}
+                <a class="btn btn-primary" href="#">Download</a>
+            {% else %}
+                <a class="btn btn-primary" href="{% url 'register' %}">Subscribe</a>
+                <a class="btn btn-default" href="{% url 'login' %}?magazines.html">Login</a>
+            {% endif %}
+
                     </div>
             </div>
             {% endfor %}
