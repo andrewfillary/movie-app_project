@@ -26,9 +26,11 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', hello_views.get_index, name='index'),
     url(r'^subscribe/$', accounts_views.register, name='register'),
+    url(r'^profile/$', accounts_views.profile, name='profile'),
     url(r'^magazines/$', magazine_views.all_magazines, name='magazines'),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
     url(r'^reviews/', include('reviews.urls')),
     url(r'^login/$', accounts_views.login, name='login'),
     url(r'^logout/$', accounts_views.logout, name='logout'),
+    url(r'^cancel_subscription/$', accounts_views.cancel_subscription, name='cancel_subscription'),
 ]

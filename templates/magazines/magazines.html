@@ -10,7 +10,7 @@
             {% if user.is_authenticated %}
                 <a class="btn btn-primary" href="#">Download</a>
             {% else %}
-                <a class="btn btn-primary" href="{% url 'register' %}">Subscribe</a>
+                <a class="btn btn-success" href="{% url 'register' %}">Subscribe</a>
                 <a class="btn btn-default" href="{% url 'login' %}?magazines.html">Login</a>
             {% endif %}
 
