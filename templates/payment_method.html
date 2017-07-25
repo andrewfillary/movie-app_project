@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+        <div>
+            <h2>Select a payment method</h2>
+                <a href="{% url 'register' %}">
+                    <div class="payment_methods">
+                        <img class="payment_icons" src="/media/images/card.png">
+                            <div>
+                                <span class="method_text">Credit/ Debit Card</span>
+                            </div>
+                    </div>
+                </a>
+                    <div class="payment_methods">
+                        <img class="payment_icons" src="/media/images/paypal.png">
+                            <div>
+                                <span class="method_text">PayPal</span>
+                            </div>
+                    </div>
+        </div>
+{% endblock %}

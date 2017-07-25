@@ -25,7 +25,8 @@ from Hello import views as hello_views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', hello_views.get_index, name='index'),
-    url(r'^subscribe/$', accounts_views.register, name='register'),
+    url(r'^subscribe/$', accounts_views.payment_method, name='payment_method'),
+    url(r'^register/$', accounts_views.register, name='register'),
     url(r'^profile/$', accounts_views.profile, name='profile'),
     url(r'^magazines/$', magazine_views.all_magazines, name='magazines'),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),

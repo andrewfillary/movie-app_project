@@ -6,6 +6,11 @@ span {
     text-align: left;
 }
 
+.method_text {
+    color: white;
+    font-weight: bold;
+}
+
 body {
     background-color: #1b1b1b;
 }
@@ -46,6 +51,28 @@ div.magazine_text {
     text-align: center;
     margin-top: 2%;
     margin-bottom: 15%;
+}
+
+.payment_icons {
+    height: 80px;
+}
+
+.payment_methods {
+    display: inline-block;
+    width: 150px;
+    vertical-align: middle;
+    border-radius: 25px;
+    margin-right: 20px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.payment_methods:hover span {
+    color: black;
+}
+
+.payment_methods:hover {
+    background-color: white;
 }
 
 .review_img {
