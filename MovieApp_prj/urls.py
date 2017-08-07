@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from magazines import views as magazine_views
+from movie_stats import views as stat_views
 from django.views.static import serve
 from .settings import MEDIA_ROOT
 from accounts import views as accounts_views
@@ -29,6 +30,7 @@ urlpatterns = [
     url(r'^register/$', accounts_views.register, name='register'),
     url(r'^profile/$', accounts_views.profile, name='profile'),
     url(r'^magazines/$', magazine_views.all_magazines, name='magazines'),
+    url(r'^stats/$', stat_views.all_statistics, name='statistics'),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
     url(r'^reviews/', include('reviews.urls')),
     url(r'^login/$', accounts_views.login, name='login'),

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% load staticfiles %}
+
+{% block head_js %}
+    <script src="{% static "js/percentage.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+            {% for statistic in statistics %}
+            <div class="stat_img">
+                <img width="100%" src="/media/{{statistic.image}}">
+            </div>
+            <div class="stat_ranking">
+                <span class="stat_title">{{statistic.title}}&nbsp;({{statistic.year}})</span>
+                <br>
+                <svg viewbox="0 0 36 36" class="circular-chart">
+                    <path class="circle" stroke-dasharray="{{statistic.percentage}}, 100"
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        <text x="50%" y="40%" text-anchor="middle" dy=".3em">{{statistic.percentage}}%</text>
+                        <text class="blue" x="50%" y="55%" text-anchor="middle" dy=".3em">{{statistic.rating}}</text>
+                </svg>
+            </div>
+
+            <div class="statistics">
+                    <span class="stat_title">Box Office</span><br>
+                    Opening Weekend: {{statistic.opening_weekend}}<br><br>
+                    Budget: {{statistic.budget}}<br>
+                    Box Office: {{statistic.box_office}}<hr>
+                    <span class="stat_title">Details</span><br>
+                    Genre: {{statistic.genre}}
+
+            </div>
+            <hr class="hr">
+            {% endfor %}
+
+{% endblock %}

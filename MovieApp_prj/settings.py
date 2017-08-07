@@ -28,7 +28,6 @@ ALLOWED_HOSTS = []
 
 SITE_ID = 1
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -45,6 +44,7 @@ INSTALLED_APPS = [
     'magazines',
     'reviews',
     'accounts',
+    'movie_stats',
 ]
 
 AUTH_USER_MODEL = 'accounts.User'

@@ -8,9 +8,9 @@
                     <p>{{magazine.month}}&nbsp;{{magazine.year}}</p>
 
             {% if user.is_authenticated %}
-                <a class="btn btn-primary" href="#">Download</a>
+                <a class="btn btn-success" href="#">Download</a>
             {% else %}
-                <a class="btn btn-success" href="{% url 'payment_method' %}">Subscribe</a>
+                <a class="btn btn-primary" href="{% url 'payment_method' %}">Subscribe</a>
                 <a class="btn btn-default" href="{% url 'login' %}?magazines.html">Login</a>
             {% endif %}
 

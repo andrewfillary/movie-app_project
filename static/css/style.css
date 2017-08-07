@@ -2,6 +2,10 @@
     color: white;
 }
 
+p {
+    margin: 10px 0 10px;
+}
+
 span {
     text-align: left;
 }
@@ -9,6 +13,10 @@ span {
 .method_text {
     color: white;
     font-weight: bold;
+}
+
+legend {
+    text-align: left;
 }
 
 body {
@@ -45,6 +53,10 @@ div.profile_right {
     display: block;
     }
 
+div.inline_block {
+    display: inline-block;
+}
+
 div.magazine_text {
     display: grid;
     width: 100%;
@@ -59,12 +71,16 @@ div.magazine_text {
 
 .payment_methods {
     display: inline-block;
-    width: 150px;
+    width: 165px;
     vertical-align: middle;
-    border-radius: 25px;
-    margin-right: 20px;
+    border-radius: 10px;
+    margin-right: 0px;
+    border: solid;
+    border-bottom-color: aquamarine;
     text-align: center;
-    background-color: transparent;
+    border-right-color: burlywood;
+    border-top-color: darkkhaki;
+    background-color: #333;
 }
 
 .payment_methods:hover span {
@@ -77,26 +93,142 @@ div.magazine_text {
 
 .review_img {
     -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    border: solid;
+    border-bottom-color: aquamarine;
+    border-right-color: burlywood;
+    border-top-color: darkkhaki;
+    background: linear-gradient(transparent, gray);
 }
 
+.center {
+    width: 100%;
+    margin-left: auto;
+    border-radius: 4px;
+    margin-right: auto;
+    padding: 2%;
+    display: block;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.margin {
+    text-align: center;
+}
+
+div.statistics {
+    width: 100%;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+div.stat_img {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.stat_title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #317eac;
+}
+
+.circular-chart {
+        width: 100%;
+        display: block;
+        margin: 10px auto;
+        max-width: 80%;
+        max-height: 250px;
+        fill: white;
+}
+
+.circle {
+        fill-opacity: 0.6;
+        fill: black;
+        stroke-width: 1px;
+        stroke-linecap: round;
+        animation: progress 2s ease-out forwards;
+    }
+
+@keyframes progress {
+        0% {
+            stroke-dasharray: 0 100;
+        }
+    }
+
+text {
+        color: white;
+        font-size: 5px;
+    }
+
+.blue {
+        fill: lightblue;
+    }
+
+#percentage {
+    color: green;
+}
 @media screen and (min-width: 480px) {
 
     div.magazines {
         display: inline-block;
-        width:20%;
+        width: 30%;
+        padding: 30px;
+        text-align: left;
+    }
+
+    div.statistics {
+        display: inline-block;
+        width: 25%;
+        padding: 10px;
+        vertical-align: top;
+        text-align: left;
+    }
+
+    div.stat_img {
+        display: inline-block;
+        width: 20%;
+        padding: 10px;
+        vertical-align: top;
+        text-align: center;
+    }
+
+    div.stat_ranking {
+        display: inline-block;
+        width: 35%;
+        padding: 10px;
+        vertical-align: top;
+        text-align: left;
+
     }
 
     div.magazine_text {
         display: inline;
-        width:20%;
+        width: 20%;
+        text-align: left;
     }
 
     div.profile_right {
-    display: inline-block;
-    width:50%;
-    vertical-align: top;
-}
+        display: inline-block;
+        width: 50%;
+        vertical-align: top;
+    }
 
+    .center {
+        width: 40%;
+    }
 
+    /*Percentage donut*/
+
+    .circular-chart {
+        width: 50%;
+        display: block;
+        margin: 10px;
+        max-width: 80%;
+        max-height: 250px;
+        fill: white;
+    }
 
 }
