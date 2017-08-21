@@ -1,0 +1,1 @@
+web: gunicorn MovieApp_prj.wsgi.application
