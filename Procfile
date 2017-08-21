@@ -1,1 +1,1 @@
-web: gunicorn MovieApp_prj.wsgi.application
+web: gunicorn MovieApp_prj.wsgi:application

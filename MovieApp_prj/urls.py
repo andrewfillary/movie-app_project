@@ -17,7 +17,8 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from magazines import views as magazine_views
 from django.views.static import serve
-from .settings import MEDIA_ROOT
+from settings.dev import MEDIA_ROOT
+from settings.dev import STATIC_ROOT
 from accounts import views as accounts_views
 from Hello import views as hello_views
 
@@ -34,4 +35,5 @@ urlpatterns = [
     url(r'^login/$', accounts_views.login, name='login'),
     url(r'^logout/$', accounts_views.logout, name='logout'),
     url(r'^cancel_subscription/$', accounts_views.cancel_subscription, name='cancel_subscription'),
+    url(r'^static/(?P<path>.*)$', serve, {'document_root': STATIC_ROOT}),
 ]
