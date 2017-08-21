@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import Statistic
+from models import Movie
 
 # Register your models here.
-admin.site.register(Statistic)
+admin.site.register(Movie)

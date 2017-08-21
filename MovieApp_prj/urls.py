@@ -16,7 +16,6 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from magazines import views as magazine_views
-from movie_stats import views as stat_views
 from django.views.static import serve
 from .settings import MEDIA_ROOT
 from accounts import views as accounts_views
@@ -25,14 +24,13 @@ from Hello import views as hello_views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', hello_views.get_index, name='index'),
+    url(r'^$', hello_views.get_magazine_and_review, name='index'),
+    url(r'', include('movie_stats.urls')),
     url(r'^subscribe/$', accounts_views.payment_method, name='payment_method'),
     url(r'^register/$', accounts_views.register, name='register'),
     url(r'^profile/$', accounts_views.profile, name='profile'),
     url(r'^magazines/$', magazine_views.all_magazines, name='magazines'),
-    url(r'^stats/$', stat_views.all_statistics, name='statistics'),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
-    url(r'^reviews/', include('reviews.urls')),
     url(r'^login/$', accounts_views.login, name='login'),
     url(r'^logout/$', accounts_views.logout, name='logout'),
     url(r'^cancel_subscription/$', accounts_views.cancel_subscription, name='cancel_subscription'),

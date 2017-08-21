@@ -2,7 +2,7 @@
 {% block content %}
         <div class="margin">
             <h2>Select a payment method</h2>
-            <div class="center">
+            <div class="payment_center">
                 <a href="{% url 'register' %}">
                     <div class="payment_methods">
                         <img class="payment_icons" src="/media/images/card.png">
@@ -12,13 +12,14 @@
                     </div>
                 </a>
             </div>
-                <div class="center">
-                    <div class="payment_methods">
+                <div class="payment_center">
+                    <div class="none">
                         <img class="payment_icons" src="/media/images/paypal.png">
                             <div>
                                 <span class="method_text">PayPal</span>
                             </div>
                     </div>
+                        <p>Coming Soon...</p>
                 </div>
         </div>
 {% endblock %}

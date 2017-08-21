@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% load staticfiles %}
+
+{% block head_js %}
+    <script src="{% static "js/percentage.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+            {% for movie in movies %}
+            <div class="stat_img">
+                <img width="100%" src="/media/{{movie.cover_art}}">
+            </div>
+            <div class="stat_ranking">
+                <span class="stat_title">{{movie.title}}&nbsp;({{movie.year}})</span>
+                <br>
+                <svg viewbox="0 0 36 36" class="circular-chart">
+                    <path class="circle" stroke-dasharray="{{movie.percentage}}, 100"
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        <text x="50%" y="40%" text-anchor="middle" dy=".3em">{{movie.percentage}}%</text>
+                        <text class="blue" x="50%" y="55%" text-anchor="middle" dy=".3em">{{movie.rating}}</text>
+                </svg>
+            </div>
+
+            <div class="statistics">
+                    <span class="stat_title">Box Office</span><br>
+                    Opening Weekend: {{movie.opening_weekend}}<br><br>
+                    Budget: {{movie.budget}}<br>
+                    Box Office: {{movie.box_office}}<hr>
+                    <span class="stat_title">Details</span><br>
+                    Genre: {{movie.genre}} <br>
+                    Director: {{movie.director}} <br>
+                    Actors: {{movie.actors}} <br>
+                    Theatre Release: {{movie.theatre_release}} <br>
+                    DVD Release: {{movie.dvd_release}}
+                    <p><button class="btn btn-default" onclick="location.href='{{ movie.id }}'">Review</button></p>
+            </div>
+            {% endfor %}
+
+{% endblock %}

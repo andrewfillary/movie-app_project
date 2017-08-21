@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% load staticfiles %}
+
+{% block content %}
+        <div class="image_div">
+            <img class="review_img" src="/media/{{review.screen_image}}">
+        </div>
+            <h1>{{review.title}}</h1>
+            <p>{{review.review}}</p>
+{% endblock %}

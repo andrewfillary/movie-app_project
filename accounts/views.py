@@ -126,4 +126,4 @@ def login(request):
 def logout(request):
     auth.logout(request)
     messages.success(request, 'You have successfully logged out')
-    return render(request, 'index.html')
+    return render(request, 'logout.html')
