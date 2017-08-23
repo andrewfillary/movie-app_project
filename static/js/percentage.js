@@ -1,3 +1,5 @@
+// Changes stroke colour based on the percentage value
+
 $(function() {
     // loops through all <path> elements with the class 'circle'
     $('path.circle').each(function() {
