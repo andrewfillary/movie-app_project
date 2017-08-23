@@ -4,7 +4,8 @@ import dj_database_url
 DEBUG = False
 
 DATABASES = {
-    'default': dj_database_url.config('mysql://b43e9fb686d9c3:979c6f2b@eu-cdbr-west-01.cleardb.com/heroku_34a0eee9a408153?reconnect=true')
+    'default': dj_database_url.config('mysql://b43e9fb686d9c3:979c6f2b@eu-cdbr-west-01.cleardb.com/heroku_34a0eee9a408153?reconnect=true'),
+    'ENGINE': 'django.db.backends.sqlite3'
 }
 
 
