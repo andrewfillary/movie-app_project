@@ -33,6 +33,10 @@ body {
     color: #317EF7;
 }
 
+.logo_style {
+    font-family: Bowlby One;
+    font-size: xx-large;
+}
 
 tr.magazines {
     width: 20%;
@@ -292,6 +296,7 @@ text {
 
 .navbar-default .navbar-toggle {
     border-color: white;
+    margin-right: 0px;
 }
 
 .navbar-default .navbar-nav>li>a {
