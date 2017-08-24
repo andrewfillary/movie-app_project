@@ -18,55 +18,52 @@
 </head>
 <body>
 <div class="container">
+    <nav class="navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsed_list" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/" class="logo_style">THEY'RE HERE!</a>
+        </div>
 
-    <!--<div class="masthead">-->
-       <!--<ul class="nav nav-pills pull-right">-->
-           <!--<li><a href="/">Home</a></li>-->
-           <!--<li><a href="/magazines">Magazines</a></li>-->
-           <!--&lt;!&ndash;<li><a href="/forum/">Forum</a></li>&ndash;&gt;-->
-           <!--<li><a href="/stats">Movies</a></li>-->
-           <!--{% if user.is_authenticated %}-->
-                <!--<li><a href="{% url 'profile' %}">My Account <img height="15px" src="/media/images/Account.png"></a></li>-->
-                <!--<li><a href="{% url 'logout' %}">Log Out</a></li>-->
-           <!--{% else %}-->
-                <!--<li><a href="{% url 'payment_method' %}">Subscribe</a></li>-->
-                <!--<li><a href="{% url 'login' %}">Log In</a></li>-->
-           <!--{% endif %}-->
-       <!--</ul>-->
-       <!--<h1><span class="fui-settings-16 muted">They're Here!</span></h1>-->
-   <!--</div>-->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="collapsed_list">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Home</a></li>
+               <li><a href="/magazines">Magazines</a></li>
 
-<nav class="navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsed_list" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="/" class="logo_style">THEY'RE HERE!</a>
-    </div>
+               <!--If logged in as superuser, alter movie link to dropdown with view & add movie options-->
+               {% if user.is_superuser %}
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="/stats" role="button" aria-haspopup="true" aria-expanded="false">
+                    Movies <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/stats">View movies</a></li>
+                        <li><a href="/new_movie">Add a movie</a></li>
+                    </ul>
+                </li>
+               {% else %}
+                    <li><a href="/stats">Movies</a></li>
+               {% endif %}
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="collapsed_list">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/">Home</a></li>
-           <li><a href="/magazines">Magazines</a></li>
-           <!--<li><a href="/forum/">Forum</a></li>-->
-           <li><a href="/stats">Movies</a></li>
-           {% if user.is_authenticated %}
+              <!--If user is registered and logged in, display profile and logout links-->
+              {% if user.is_authenticated %}
                 <li><a href="{% url 'profile' %}">My Account <img height="15px" src="/media/images/Account.png"></a></li>
                 <li><a href="{% url 'logout' %}">Log Out</a></li>
-           {% else %}
+              {% else %}
                 <li><a href="{% url 'payment_method' %}">Subscribe</a></li>
                 <li><a href="{% url 'login' %}">Log In</a></li>
-           {% endif %}
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+              {% endif %}
+
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
 
 
    <hr>

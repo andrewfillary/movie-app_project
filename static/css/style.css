@@ -38,6 +38,22 @@ body {
     font-size: 25px;
 }
 
+.navbar-nav>li>.dropdown-menu {
+    background-color: #222;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    background-color: transparent;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+    background-color: transparent;
+}
+
+.dropdown-menu>li>a {
+    color: #317eac;
+}
+
 tr.magazines {
     width: 20%;
     display: block;
