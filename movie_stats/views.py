@@ -26,7 +26,7 @@ def new_movie(request):
             post = form.save(commit=False)
             post.author = request.user
             post.save()
-            return redirect(all_statistics, post.pk)
+            return redirect(all_statistics)
     else:
         form = MovieForm()
     return render(request, 'movieform.html', {'form': form})
