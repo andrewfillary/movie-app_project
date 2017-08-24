@@ -18,7 +18,7 @@ from django.contrib import admin
 from magazines import views as magazine_views
 from django.views.static import serve
 from settings.dev import MEDIA_ROOT
-from settings.dev import STATIC_ROOT
+from settings.staging import STATIC_ROOT
 from accounts import views as accounts_views
 from Hello import views as hello_views
 

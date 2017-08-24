@@ -14,6 +14,8 @@ DATABASES = {
     }
 }
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 # Stripe environment variables
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_skWYpLAsIvHYQZq5JizLocrW')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_1SOfreX572PCJQa5GK6GKJZo')
