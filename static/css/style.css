@@ -35,7 +35,7 @@ body {
 
 .logo_style {
     font-family: Bowlby One;
-    font-size: xx-large;
+    font-size: 22px;
 }
 
 tr.magazines {
@@ -361,6 +361,10 @@ a:hover, a:focus {
         padding-right: 5%;
         padding-top: 0px;
         height: 100%;
+    }
+
+    .logo_style {
+        font-size: xx-large;
     }
 
     div.magazines {
