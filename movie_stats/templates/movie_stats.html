@@ -24,17 +24,19 @@
             </div>
 
             <div class="statistics">
-                    <span class="stat_title">Box Office</span><br>
-                    Opening Weekend: {{movie.opening_weekend}}<br><br>
+                <span class="stat_title">Box Office</span><br>
+                    Opening Weekend: {{movie.opening_weekend}}<br>
                     Budget: {{movie.budget}}<br>
-                    Box Office: {{movie.box_office}}<hr>
-                    <span class="stat_title">Details</span><br>
+                    Box Office: {{movie.box_office}}
+                <p><span class="stat_title">Details</span><br>
                     Genre: {{movie.genre}} <br>
                     Director: {{movie.director}} <br>
                     Actors: {{movie.actors}} <br>
                     Theatre Release: {{movie.theatre_release}} <br>
                     DVD Release: {{movie.dvd_release}}
-                    <p><button class="btn btn-default" onclick="location.href='{{ movie.id }}'">Review</button></p>
+                </p>
+                <p><button class="btn btn-success" onclick="location.href='{{ movie.id }}'">Review</button>
+                </p>
             </div>
             {% endfor %}
 

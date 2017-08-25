@@ -3,17 +3,17 @@
 {% block content %}
     {% for movie in movies %}
         <div class="review_holder_index">
-        <div class="review">
-            <div class="index_review_title"><span>{{movie.title}} - <a class="link" href="/stats/{{ movie.id }}">Full Review</a> </span></div>
-            <img width="100%" src="/media/{{movie.screen_image}}">
-        </div>
-<div class="review_snippet"><p>{{movie.review}}</p></div>
+            <div class="review">
+                <div class="index_review_title"><span>{{movie.title}} - <a class="link" href="/stats/{{ movie.id }}">Full Review</a> </span></div>
+                    <img width="100%" src="/media/{{movie.screen_image}}">
+            </div>
+                <div class="review_snippet"><p>{{movie.review}}</p></div>
         </div>
     {% endfor %}
 
     {% for magazine in magazines %}
     <div class="magazine_holder_index">
-        <div class="magazine_header"><span>Magazines</span></div>
+        <div class="magazine_header"><span style="font-family: 'Bowlby One'">Magazines</span></div>
             <div class="magazine_index">
                 <img width="80%" src="/media/{{magazine.image}}">
                     <div class="magazine_text">

@@ -42,7 +42,7 @@ class UserRegistrationForm(UserCreationForm):
 
         return password2
 
-# Clean e-mail added last night
+# Clean e-mail
     def clean_email(self):
         email = self.cleaned_data.get('email')
 
