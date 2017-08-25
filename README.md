@@ -3,17 +3,20 @@
 ## Overview
 
 ### What does it do?
-They're here is a movie review, subscription, statistic database app. Users can browse movie reviews, statistics
-and subscribe to a monthly magazine that is available to download in PDF form upon successful registration.
+They're here is a movie database app. Users can browse movie reviews, statistics
+and subscribe to the magazine that is available to download in PDF format when
+succesfully logged in.
 
 ### How it works...
-Created using Python's Django framework, the popular MVC structure seperates logic and design, and provides url routing, 
+Created using Python's Django framework, the MVC structure seperates logic and design, and provides url routing, 
 making code easily accessible and tidy. The source code and SQL database are deployed to Heroku, users with adminstrative 
-privelages may add/edit objects (i.e. magazines, movies) for different models from django's built in admin panel.
+privelages may add/edit objects (i.e. magazines, movies) from django's built in admin panel. 
 
 ## Technologies
 - **Django** - Python based MVC framework. 
 - **Heroku** - Code and database deployment solution.
+
+## Heroku (third party packages)
 - **DJ Database URL** - Third party package for Heroku database configuration.
 - **Whitenoise** - Static file routing.
 
@@ -21,9 +24,13 @@ privelages may add/edit objects (i.e. magazines, movies) for different models fr
 If you would like to run this app on your own server, first fork the repo into a local directory, install the **requirements.txt** file.
 
 ## Important
-The app is a project assignment, therefore the subscription is for demonstration only.
-To register you must fill the form out in full and use the following 16 digit card number which is reserved for the stripe sandbox
-payment process.
+This app is a course assignment, therefore the subscription is for demonstration only.
+To register you must fill out the subscribition form in full and use the 16 digit card number,
+reserved for the stripe sandbox payment process.
 
-**16 Digit number**: 4242 4242 4242 4242
+**Stripe 16 Digit Card No.** (for registration)
+4242 4242 4242 4242
+
+## Live Site
+http://movie-app-project.herokuapp.com
 
