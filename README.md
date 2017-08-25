@@ -3,7 +3,7 @@
 ## Overview
 
 ### What does it do?
-They're here is a movie database app. Users can browse movie reviews, statistics
+"They're here!" is a movie database app. Users can browse movie reviews, statistics
 and subscribe to the magazine that is available to download in PDF format when
 succesfully logged in.
 
