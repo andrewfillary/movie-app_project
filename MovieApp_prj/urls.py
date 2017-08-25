@@ -36,4 +36,7 @@ urlpatterns = [
     url(r'^logout/$', accounts_views.logout, name='logout'),
     url(r'^cancel_subscription/$', accounts_views.cancel_subscription, name='cancel_subscription'),
     url(r'^static/(?P<path>.*)$', serve, {'document_root': STATIC_ROOT}),
+    url(r'^about/$', hello_views.get_about_page, name='about'),
+    url(r'^contact/$', hello_views.get_contact_page, name='contact'),
+
 ]

@@ -33,6 +33,10 @@ body {
     color: #317EF7;
 }
 
+.jumbotron {
+    background-color: #317eac;
+}
+
 .logo_style {
     font-family: Bowlby One;
     font-size: 25px;
