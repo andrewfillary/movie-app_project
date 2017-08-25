@@ -16,7 +16,7 @@ privelages may add/edit objects (i.e. magazines, movies) from django's built in 
 - **Django** - Python based MVC framework. 
 - **Heroku** - Code and database deployment solution.
 
-## Heroku (third party packages)
+### Heroku (third party packages)
 - **DJ Database URL** - Third party package for Heroku database configuration.
 - **Whitenoise** - Static file routing.
 
