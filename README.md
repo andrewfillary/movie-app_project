@@ -23,7 +23,7 @@ privelages may add/edit objects (i.e. magazines, movies) from django's built in 
 ## Requirements
 If you would like to run this app on your own server, first fork the repo into a local directory, then install the **requirements.txt** file.
 
-**Important** <br />
+**Important!** <br />
 This app is a course assignment, therefore the subscription is for demonstration only.
 To register you must fill out the subscribition form in full and use the 16 digit card number,
 reserved for the stripe sandbox payment process.
