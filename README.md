@@ -21,7 +21,7 @@ privelages may add/edit objects (i.e. magazines, movies) from django's built in 
 - **Whitenoise** - Static file routing.
 
 ## Requirements
-If you would like to run this app on your own server, first fork the repo into a local directory, install the **requirements.txt** file.
+If you would like to run this app on your own server, first fork the repo into a local directory, then install the **requirements.txt** file.
 
 ## Important
 This app is a course assignment, therefore the subscription is for demonstration only.
