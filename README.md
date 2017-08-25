@@ -17,7 +17,7 @@ privelages may add/edit objects (i.e. magazines, movies) from django's built in 
 - **Heroku** - Code and database deployment solution.
 
 ### Heroku (third party packages)
-- **DJ Database URL** - Third party package for Heroku database configuration.
+- **DJ Database URL** - Database URL configuration.
 - **Whitenoise** - Static file routing.
 
 ## Requirements
@@ -28,7 +28,7 @@ This app is a course assignment, therefore the subscription is for demonstration
 To register you must fill out the subscribition form in full and use the 16 digit card number,
 reserved for the stripe sandbox payment process.
 
-**Stripe 16 Digit Card No.** (for registration)
+**Stripe 16 Digit Card No.** (for registration) <br />
 4242 4242 4242 4242
 
 ## Live Site
